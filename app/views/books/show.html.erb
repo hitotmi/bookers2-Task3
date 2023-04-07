@@ -33,21 +33,16 @@
               </p>
             <% end %>
           </td>
-          
-          
-          
-          
-          
-            <td>
-              <% if @book.user == current_user %>
-                <%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success" %>
-                <% end %>
-            </td>
-            <td>
-              <% if @book.user == current_user %>
-                <%= link_to 'Destroy', @book, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger"%>
-              <% end %>  
-            </td>
+          <td>
+            <% if @book.user == current_user %>
+              <%= link_to 'Edit', edit_book_path(@book), class: "btn btn-sm btn-success" %>
+            <% end %>
+          </td>
+          <td>
+            <% if @book.user == current_user %>
+              <%= link_to 'Destroy', @book, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger"%>
+            <% end %>  
+          </td>
         </tr>
       </table>
     </div>
